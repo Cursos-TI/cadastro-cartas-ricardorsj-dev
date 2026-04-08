@@ -3,6 +3,7 @@
 // Desafio Super Trunfo - Países
 // Tema 1 - Cadastro das cartas
 // Objetivo: No nível novato você deve criar as cartas representando as cidades utilizando scanf para entrada de dados e printf para exibir as informações.
+// Objetivo 2: Calcular PIB e densidade populacional e incluir no cadastro de cartas. 
 int main(){
 
   char estado[20];
@@ -12,6 +13,10 @@ int main(){
   float area;
   float pib;
   int pontos_turisticos;
+  float densidade_populacional;
+  double pib_per_capita;
+
+
 
   printf("=== CADASTRO DE CARTAS ===\n");
 
@@ -32,16 +37,25 @@ int main(){
   scanf("%s", cidade);
 
   printf("Digite a população: \n");
-  scanf("%d", &populacao);
+  scanf(" %d", &populacao);
 
   printf("Digite a área da cidade: \n");
-  scanf("%f", &area);
+  scanf(" %f", &area);
 
   printf("Digite o PIB da cidade: \n");
-  scanf("%f", &pib);
+  scanf(" %f", &pib);
 
   printf("Digite o nº de pontos turísticos: \n");
-  scanf("%d", &pontos_turisticos);
+  scanf(" %d", &pontos_turisticos);
+
+  // cálculo da densidade, utilizando as variáveis populacao e area do exercicio anterior
+
+  densidade_populacional= (float) populacao / area; 
+
+  // cálculo do PIB per capita 
+
+  pib_per_capita = pib / (float) populacao;
+
 
   // saída de dados carta 1
   // aqui, a função print irá imprimir (colocar na tela) o que foi salvo na função scanf
@@ -56,6 +70,9 @@ int main(){
   printf("Área: %f Km² \n", area);
   printf("PIB: %f milhões de reais \n", pib);
   printf("Pontos turísticos: %d \n", pontos_turisticos);
+  printf("Densidade populacional: %.2f\n", densidade_populacional);
+  printf("PIB per capita: %.2f\n", pib_per_capita);
+
 
   // entrada de dados carta 2 
   printf("=== Cadastro CARTA 2 === \n");
@@ -70,16 +87,25 @@ int main(){
   scanf("%s", cidade);
 
   printf("Digite a população: \n");
-  scanf("%d", &populacao);
+  scanf(" %d", &populacao);
 
   printf("Digite a área: \n");
-  scanf("%f", &area);
+  scanf(" %f", &area);
 
   printf("Digite o PIB da cidade: \n");
-  scanf("%f", &pib);
+  scanf(" %f", &pib);
 
   printf("Digite o nº de pontos turísticos: \n");
-  scanf("%d", &pontos_turisticos);
+  scanf(" %d", &pontos_turisticos);
+
+  // cálculo da densidade, utilizando as variáveis populacao e area do exercicio anterior
+
+  densidade_populacional= (float)populacao / area; 
+
+  // cálculo do PIB per capita 
+
+  pib_per_capita = pib / (float)populacao;
+
 
 
   // saída de dados na CARTA 2
@@ -92,6 +118,9 @@ int main(){
   printf("Área: %f \n", area);
   printf("PIB: %f \n", pib);
   printf("Pontos turísticos: %d \n", pontos_turisticos);
+  printf("Densidade populacional: %.2f\n", densidade_populacional);
+  printf("PIB per capita: %.2f\n", pib_per_capita);
+
 
   printf("=== CADASTRO ENCERRADO COM SUCESSO ===");
 
